@@ -12,7 +12,12 @@ public class GaussMethod {
 
     public static void main(String[] args) {
         for (int q = 0; q < arr.length; q++) {
-            System.out.println("Округление до " + arr[q] + " знаков после запятой");
+            if(arr[q]==1){
+                System.out.println("Вычисления с машинной точностью");
+            }else {
+                System.out.println("Округление до " + arr[q] + " знаков после запятой");
+            }
+
             double[][] roundedCoefficients = roundMatrix(coefficients, arr[q]);
             for (int i = 0; i < roundedCoefficients.length; i++) {
                 for (int j = 0; j < roundedCoefficients[0].length; j++) {
